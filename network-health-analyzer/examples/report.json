@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "measurement_count": 6,
+  "snapshot_count": 2,
+  "latest": {
+    "captured_at": "2026-11-24T17:00:00+00:00",
+    "ap_count": 3,
+    "connected_clients": 1000,
+    "active_clients": 250,
+    "wan_capacity_mbps": 100.0,
+    "wan_load_mbps": 96.0,
+    "wan_utilization_pct": 96.0,
+    "equal_share_ceiling_mbps": 0.4,
+    "status": "critical",
+    "findings": [
+      {
+        "scope": "Shared WAN",
+        "metric": "wan_utilization_pct",
+        "severity": "critical",
+        "evidence": "WAN utilization: 96%",
+        "next_step": "Check WAN traffic and repeat measurements at peak and quiet times."
+      },
+      {
+        "scope": "Lobby",
+        "metric": "packet_loss_pct",
+        "severity": "warning",
+        "evidence": "Packet loss: 1.5%",
+        "next_step": "Compare gateway and internet packet loss on wired and wireless clients."
+      },
+      {
+        "scope": "Lobby",
+        "metric": "latency_ms",
+        "severity": "warning",
+        "evidence": "Internet latency: 125 ms",
+        "next_step": "Compare wired and wireless latency to the same target; inspect congestion."
+      },
+      {
+        "scope": "Conference",
+        "metric": "dns_ms",
+        "severity": "critical",
+        "evidence": "DNS lookup time: 550 ms",
+        "next_step": "Repeat uncached DNS lookups; compare the configured resolver with an approved alternative."
+      },
+      {
+        "scope": "Rooms-East",
+        "metric": "packet_loss_pct",
+        "severity": "critical",
+        "evidence": "Packet loss: 4%",
+        "next_step": "Compare gateway and internet packet loss on wired and wireless clients."
+      },
+      {
+        "scope": "Rooms-East",
+        "metric": "latency_ms",
+        "severity": "critical",
+        "evidence": "Internet latency: 230 ms",
+        "next_step": "Compare wired and wireless latency to the same target; inspect congestion."
+      },
+      {
+        "scope": "Rooms-East",
+        "metric": "dns_ms",
+        "severity": "warning",
+        "evidence": "DNS lookup time: 180 ms",
+        "next_step": "Repeat uncached DNS lookups; compare the configured resolver with an approved alternative."
+      },
+      {
+        "scope": "Rooms-East",
+        "metric": "rssi_dbm",
+        "severity": "critical",
+        "evidence": "Representative client signal: -82 dBm",
+        "next_step": "Measure signal at affected client locations and check AP placement and interference."
+      }
+    ],
+    "access_points": [
+      {
+        "captured_at": "2026-11-24T17:00:00+00:00",
+        "ap_name": "Conference",
+        "connected_clients": 250,
+        "active_clients": 60,
+        "wan_capacity_mbps": 100.0,
+        "wan_load_mbps": 96.0,
+        "packet_loss_pct": 0.5,
+        "latency_ms": 70.0,
+        "dns_ms": 550.0,
+        "rssi_dbm": -62.0
+      },
+      {
+        "captured_at": "2026-11-24T17:00:00+00:00",
+        "ap_name": "Lobby",
+        "connected_clients": 300,
+        "active_clients": 70,
+        "wan_capacity_mbps": 100.0,
+        "wan_load_mbps": 96.0,
+        "packet_loss_pct": 1.5,
+        "latency_ms": 125.0,
+        "dns_ms": 85.0,
+        "rssi_dbm": -65.0
+      },
+      {
+        "captured_at": "2026-11-24T17:00:00+00:00",
+        "ap_name": "Rooms-East",
+        "connected_clients": 450,
+        "active_clients": 120,
+        "wan_capacity_mbps": 100.0,
+        "wan_load_mbps": 96.0,
+        "packet_loss_pct": 4.0,
+        "latency_ms": 230.0,
+        "dns_ms": 180.0,
+        "rssi_dbm": -82.0
+      }
+    ]
+  },
+  "snapshots": [
+    {
+      "captured_at": "2026-11-24T05:00:00+00:00",
+      "ap_count": 3,
+      "connected_clients": 450,
+      "active_clients": 60,
+      "wan_capacity_mbps": 100.0,
+      "wan_load_mbps": 35.0,
+      "wan_utilization_pct": 35.0,
+      "equal_share_ceiling_mbps": 1.6666666666666667,
+      "status": "within_thresholds",
+      "findings": [],
+      "access_points": [
+        {
+          "captured_at": "2026-11-24T05:00:00+00:00",
+          "ap_name": "Conference",
+          "connected_clients": 120,
+          "active_clients": 15,
+          "wan_capacity_mbps": 100.0,
+          "wan_load_mbps": 35.0,
+          "packet_loss_pct": 0.2,
+          "latency_ms": 32.0,
+          "dns_ms": 40.0,
+          "rssi_dbm": -60.0
+        },
+        {
+          "captured_at": "2026-11-24T05:00:00+00:00",
+          "ap_name": "Lobby",
+          "connected_clients": 150,
+          "active_clients": 20,
+          "wan_capacity_mbps": 100.0,
+          "wan_load_mbps": 35.0,
+          "packet_loss_pct": 0.1,
+          "latency_ms": 28.0,
+          "dns_ms": 32.0,
+          "rssi_dbm": -58.0
+        },
+        {
+          "captured_at": "2026-11-24T05:00:00+00:00",
+          "ap_name": "Rooms-East",
+          "connected_clients": 180,
+          "active_clients": 25,
+          "wan_capacity_mbps": 100.0,
+          "wan_load_mbps": 35.0,
+          "packet_loss_pct": 0.3,
+          "latency_ms": 45.0,
+          "dns_ms": 55.0,
+          "rssi_dbm": -65.0
+        }
+      ]
+    },
+    {
+      "captured_at": "2026-11-24T17:00:00+00:00",
+      "ap_count": 3,
+      "connected_clients": 1000,
+      "active_clients": 250,
+      "wan_capacity_mbps": 100.0,
+      "wan_load_mbps": 96.0,
+      "wan_utilization_pct": 96.0,
+      "equal_share_ceiling_mbps": 0.4,
+      "status": "critical",
+      "findings": [
+        {
+          "scope": "Shared WAN",
+          "metric": "wan_utilization_pct",
+          "severity": "critical",
+          "evidence": "WAN utilization: 96%",
+          "next_step": "Check WAN traffic and repeat measurements at peak and quiet times."
+        },
+        {
+          "scope": "Lobby",
+          "metric": "packet_loss_pct",
+          "severity": "warning",
+          "evidence": "Packet loss: 1.5%",
+          "next_step": "Compare gateway and internet packet loss on wired and wireless clients."
+        },
+        {
+          "scope": "Lobby",
+          "metric": "latency_ms",
+          "severity": "warning",
+          "evidence": "Internet latency: 125 ms",
+          "next_step": "Compare wired and wireless latency to the same target; inspect congestion."
+        },
+        {
+          "scope": "Conference",
+          "metric": "dns_ms",
+          "severity": "critical",
+          "evidence": "DNS lookup time: 550 ms",
+          "next_step": "Repeat uncached DNS lookups; compare the configured resolver with an approved alternative."
+        },
+        {
+          "scope": "Rooms-East",
+          "metric": "packet_loss_pct",
+          "severity": "critical",
+          "evidence": "Packet loss: 4%",
+          "next_step": "Compare gateway and internet packet loss on wired and wireless clients."
+        },
+        {
+          "scope": "Rooms-East",
+          "metric": "latency_ms",
+          "severity": "critical",
+          "evidence": "Internet latency: 230 ms",
+          "next_step": "Compare wired and wireless latency to the same target; inspect congestion."
+        },
+        {
+          "scope": "Rooms-East",
+          "metric": "dns_ms",
+          "severity": "warning",
+          "evidence": "DNS lookup time: 180 ms",
+          "next_step": "Repeat uncached DNS lookups; compare the configured resolver with an approved alternative."
+        },
+        {
+          "scope": "Rooms-East",
+          "metric": "rssi_dbm",
+          "severity": "critical",
+          "evidence": "Representative client signal: -82 dBm",
+          "next_step": "Measure signal at affected client locations and check AP placement and interference."
+        }
+      ],
+      "access_points": [
+        {
+          "captured_at": "2026-11-24T17:00:00+00:00",
+          "ap_name": "Conference",
+          "connected_clients": 250,
+          "active_clients": 60,
+          "wan_capacity_mbps": 100.0,
+          "wan_load_mbps": 96.0,
+          "packet_loss_pct": 0.5,
+          "latency_ms": 70.0,
+          "dns_ms": 550.0,
+          "rssi_dbm": -62.0
+        },
+        {
+          "captured_at": "2026-11-24T17:00:00+00:00",
+          "ap_name": "Lobby",
+          "connected_clients": 300,
+          "active_clients": 70,
+          "wan_capacity_mbps": 100.0,
+          "wan_load_mbps": 96.0,
+          "packet_loss_pct": 1.5,
+          "latency_ms": 125.0,
+          "dns_ms": 85.0,
+          "rssi_dbm": -65.0
+        },
+        {
+          "captured_at": "2026-11-24T17:00:00+00:00",
+          "ap_name": "Rooms-East",
+          "connected_clients": 450,
+          "active_clients": 120,
+          "wan_capacity_mbps": 100.0,
+          "wan_load_mbps": 96.0,
+          "packet_loss_pct": 4.0,
+          "latency_ms": 230.0,
+          "dns_ms": 180.0,
+          "rssi_dbm": -82.0
+        }
+      ]
+    }
+  ]
+}

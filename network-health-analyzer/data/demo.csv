@@ -1,0 +1,7 @@
+captured_at,ap_name,connected_clients,active_clients,wan_capacity_mbps,wan_load_mbps,packet_loss_pct,latency_ms,dns_ms,rssi_dbm
+2026-11-24T08:00:00+03:00,Lobby,150,20,100,35,0.1,28,32,-58
+2026-11-24T08:00:00+03:00,Conference,120,15,100,35,0.2,32,40,-60
+2026-11-24T08:00:00+03:00,Rooms-East,180,25,100,35,0.3,45,55,-65
+2026-11-24T20:00:00+03:00,Lobby,300,70,100,96,1.5,125,85,-65
+2026-11-24T20:00:00+03:00,Conference,250,60,100,96,0.5,70,550,-62
+2026-11-24T20:00:00+03:00,Rooms-East,450,120,100,96,4.0,230,180,-82
