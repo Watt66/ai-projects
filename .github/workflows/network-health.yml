@@ -1,0 +1,25 @@
+name: Network health analyzer
+on:
+  push:
+    paths: ['network-health-analyzer/**', '.github/workflows/network-health.yml']
+  pull_request:
+    paths: ['network-health-analyzer/**', '.github/workflows/network-health.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run behavioral tests
+        working-directory: network-health-analyzer
+        run: python -m unittest discover -s tests -v
+      - name: Generate sample reports
+        working-directory: network-health-analyzer
+        run: python analyze.py data/demo.csv --output /tmp/network-report.html --json /tmp/network-report.json
